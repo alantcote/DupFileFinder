@@ -4,9 +4,11 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>net.sf.cotelab</groupId>
-	<artifactId>Euler</artifactId>
+	<artifactId>FindDuplicates</artifactId>
 	<version>0.1.0-SNAPSHOT</version>
 	<packaging>jar</packaging>
+
+	<description>A program to identify duplicate files.</description>
 
 	<name>${project.groupId}:${project.artifactId}</name>
 	<url>https://github.com/alantcote</url>
@@ -29,6 +31,8 @@
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<timestamp>${maven.build.timestamp}</timestamp>
+		<maven.build.timestamp.format>dd-MM-yyyy HH:mm</maven.build.timestamp.format>
 	</properties>
 
 	<distributionManagement>
@@ -37,8 +41,6 @@
 			<url>https://oss.sonatype.org/content/repositories/snapshots</url>
 		</snapshotRepository>
 	</distributionManagement>
-
-	<description>A program to identify duplicate files.</description>
 
 	<organization>
 		<name>Cote' Lab</name>
@@ -83,6 +85,12 @@
 	</pluginRepositories>
 
 	<build>
+		<resources>
+			<resource>
+				<directory>src/main/resources</directory>
+				<filtering>true</filtering>
+			</resource>
+		</resources>
 		<plugins>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
@@ -204,6 +212,21 @@
 			<artifactId>hamcrest-library</artifactId>
 			<version>2.2</version>
 			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.openjfx</groupId>
+			<artifactId>javafx-controls</artifactId>
+			<version>17.0.1</version>
+		</dependency>
+		<dependency>
+			<groupId>org.openjfx</groupId>
+			<artifactId>javafx-swing</artifactId>
+			<version>17.0.1</version>
+		</dependency>
+		<dependency>
+			<groupId>org.openjfx</groupId>
+			<artifactId>javafx-web</artifactId>
+			<version>17.0.1</version>
 		</dependency>
 		<dependency>
 			<groupId>junit</groupId>

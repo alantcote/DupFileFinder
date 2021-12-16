@@ -4,6 +4,7 @@
 package net.sf.cotelab.app.dupfilefinder.gui;
 
 import java.awt.BorderLayout;
+import java.awt.Dimension;
 import java.awt.GraphicsConfiguration;
 import java.awt.HeadlessException;
 import java.awt.event.ActionEvent;
@@ -12,6 +13,7 @@ import java.beans.IndexedPropertyChangeEvent;
 import java.beans.PropertyChangeEvent;
 import java.beans.PropertyChangeListener;
 import java.io.File;
+import java.net.URL;
 import java.text.NumberFormat;
 import java.util.ArrayList;
 import java.util.Collection;
@@ -558,6 +560,7 @@ public class DFFFrame extends JFrame implements ResettableObject {
     protected HashSet<File> accessDeniedFiles = new HashSet<File>();
 
     protected HashMap<File, Integer> ancestorsOfDups = new HashMap<File, Integer>();
+    protected DFFFrame thisFrame;
     protected HashMap<File, String> file2DisplayNameCache =
 			new HashMap<File, String>();
 	protected HashMap<File, Collection<File>> file2EquivSetMap =
@@ -570,12 +573,16 @@ public class DFFFrame extends JFrame implements ResettableObject {
 					file2DisplayNameCache, file2IconCache,
 					file2EquivSetMap, ancestorsOfDups);
 	protected HeapMonitorPanel heapMonitor = new HeapMonitorPanel();
+	protected JMenuItem helpAboutMenuItem;
+	protected JMenu helpMenu;
 	protected CachedFileTreeCellRenderer highlightingTreeCellRenderer =
 			new DuplicateHighlightingTreeCellRenderer(
 					file2DisplayNameCache, file2IconCache,
 					file2EquivSetMap, ancestorsOfDups, accessDeniedFiles);
 	protected Hunter hunter = null;
+
 	protected JMenuBar menuBar = null;
+
 	protected DFFTabbedPanel tabbedPanel = null;
 
 	/**
@@ -697,9 +704,45 @@ public class DFFFrame extends JFrame implements ResettableObject {
         fileMenu = new JMenu("File");
         fileMenu.add(fileExitMenuItem);
         
+        thisFrame = this;
+        
+        helpAboutMenuItem = new JMenuItem("About DupFileFinder");
+        helpAboutMenuItem.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				OKBrowserDialog popup =
+						new OKBrowserDialog(thisFrame, "About DupFileFinder", true);
+
+				popup.setDefaultCloseOperation(DISPOSE_ON_CLOSE);
+				popup.setMinimumSize(new Dimension(500, 500));
+				popup.setUrl(getResource("helpAbout.html"));
+				
+				popup.pack();
+				
+				popup.setVisible(true);
+			}
+        });
+        
+        helpMenu = new JMenu("Help");
+        helpMenu.add(helpAboutMenuItem);
+        
         menuBar = new JMenuBar();
         menuBar.add(fileMenu);
+        menuBar.add(helpMenu);
         
         this.setJMenuBar(menuBar);
+	}
+
+	/**
+	 * Get the URL of a given resource.
+	 * 
+	 * @param resourceName the resource path, relative to this class' package.
+	 * @return the URL.
+	 */
+	protected String getResource(String resourceName) {
+//		System.out.println("resourceName: " + resourceName);
+		
+		URL url = getClass().getResource(resourceName);
+
+		return url.toExternalForm();
 	}
 }
