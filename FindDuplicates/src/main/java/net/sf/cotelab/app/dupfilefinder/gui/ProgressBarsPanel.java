@@ -17,11 +17,11 @@ import javax.swing.JPanel;
 public class ProgressBarsPanel extends JPanel implements ResettableObject {
 	private static final long serialVersionUID = 1L;
 
-    protected ResettableJProgressBar phaseProgressBar =
-    		new ResettableJProgressBar();
+    protected PredictiveJProgressBar phaseProgressBar =
+    		new PredictiveJProgressBar();
 	protected JLabel phaseProgressBarLabel = new JLabel("Phase progress:");
-    protected ResettableJProgressBar searchProgressBar =
-    		new ResettableJProgressBar();
+    protected PredictiveJProgressBar searchProgressBar =
+    		new PredictiveJProgressBar();
 	protected JLabel searchProgressBarLabel = new JLabel("Search progress:");
 
 	/**
@@ -87,7 +87,8 @@ public class ProgressBarsPanel extends JPanel implements ResettableObject {
 	 * @see javax.swing.JProgressBar#setString(java.lang.String)
 	 */
 	public void setPhaseProgressBarString(String s) {
-		phaseProgressBar.setString(s);
+		// make this method into a no-op
+//		phaseProgressBar.setString(s);
 	}
 	
 	/**

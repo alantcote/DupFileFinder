@@ -322,59 +322,6 @@ public class Hunter
 
 //        logger.info("exit the method.");
     }
-
-    protected String formatElapsed(Date begin, Date end) {
-        long beginMillis = begin.getTime();
-        long endMillis = end.getTime();
-
-        if (beginMillis > endMillis) {
-            endMillis = (new Date()).getTime();
-        }
-
-        return formatMillis(endMillis - beginMillis);
-    }
-    protected String formatMillis(long millis) {
-        String retValue = null;
-        long mins = 0;
-        double millisNoMins = 0;
-        double secs = 0;
-        long hrs = 0;
-        long days = 0;
-
-        mins = millis / MILLIS_PER_MIN;
-        millisNoMins = millis % MILLIS_PER_MIN;
-        secs = millisNoMins / MILLIS_PER_SEC;
-        hrs = mins / MINS_PER_HR;
-        mins %= MINS_PER_HR;
-        days = hrs / HRS_PER_DAY;
-        hrs = hrs % HRS_PER_DAY;
-
-        retValue = Long.toString(days) + "d "
-                + Long.toString(hrs) + "h "
-                + Long.toString(mins) + "m "
-                + secsFormat.format(secs) + "s";
-
-        return retValue;
-    }
-
-    protected String makePctString(long num, long denom, Date begin) {
-        double numDbl = num;
-        double fractionCompleted = numDbl / denom;
-        double percentCompleted = (fractionCompleted + 0.005) * 100;
-        int pct = (int) percentCompleted;
-        long nowMillis = (new Date()).getTime();
-        double millisUsed = nowMillis - begin.getTime();
-        double millisTotal = millisUsed / fractionCompleted;
-        double millisRemain = millisTotal - millisUsed;
-        String retValue = numberFormat.format(pct) + "%";
-
-        if (pct > 20) {
-            retValue = retValue + " (~"
-                    + formatMillis((long) millisRemain) + " remaining)";
-        }
-
-        return retValue;
-    }
     
     /* (non-Javadoc)
      * @see javax.swing.SwingWorker#process(java.util.List)
@@ -398,25 +345,25 @@ public class Hunter
 
 	protected void updateProgress(int phaseProgress) {
 		int nbrPhases = pipeline.size();
-		double finishedWeight = 0;
-		double maxWeight = 0;
-		double curProRataWeight = 0;
-		double totalProRataWeight = 0;
-		double fractDone = 0;
-		double pctDoneDouble = 0;
-		int progressRollUp = 0;
-		boolean isUsingCksum = nbrPhases == 5;
+		boolean isUsingCksum = (nbrPhases == 5);
+		double weightRange = 0;	// sum of weight of all phases in pipeline
+		double weightFinished = 0;
+		double pctFinished;
+		double curProRataWeight;
 		
 		// collect some weight info
 		for (int i = 0; i < nbrPhases; ++i) {
-			double pw = pipeline.get(i).getProgressWeight(isUsingCksum);
+			Phase p = pipeline.get(i);
+			double pw = p.getProgressWeight(isUsingCksum);
+			
+			weightRange += pw;
 			
 			if (i < nbrPhasesFinished) {
-				finishedWeight += pw;
+				weightFinished += pw;
 			}
-			
-			maxWeight += pw;
 		}
+		
+		pctFinished = (weightFinished * 100) / weightRange;
 		
 		if (nbrPhasesFinished < nbrPhases) {
 			double curWeight =
@@ -424,14 +371,9 @@ public class Hunter
 							isUsingCksum);
 			
 			curProRataWeight = (curWeight * phaseProgress) / 100;
+			pctFinished += (curProRataWeight * 100) / weightRange;
 		}
 		
-		// wrap up the math
-		totalProRataWeight = finishedWeight + curProRataWeight;
-		fractDone = totalProRataWeight / maxWeight;
-		pctDoneDouble = fractDone * 100;
-		progressRollUp = (int) Math.round(pctDoneDouble);
-		
-		setProgress(progressRollUp);
+		setProgress((int) pctFinished);
 	}
 }

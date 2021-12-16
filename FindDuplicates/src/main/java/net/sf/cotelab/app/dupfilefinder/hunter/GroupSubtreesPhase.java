@@ -114,8 +114,8 @@ public class GroupSubtreesPhase extends Phase {
 			this.count = count;
 		}
 	}
-	public static final double PROGRESS_WEIGHT = 17100;
-    public static final double PROGRESS_WEIGHT_USING_CKSUM = 17539;
+	public static final double PROGRESS_WEIGHT = 5;
+    public static final double PROGRESS_WEIGHT_USING_CKSUM = 5;
 	
 	@SuppressWarnings("unused")
 	private static Logger log =
