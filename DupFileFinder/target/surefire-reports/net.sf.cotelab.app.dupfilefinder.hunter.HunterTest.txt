@@ -1,9 +1,9 @@
 -------------------------------------------------------------------------------
 Test set: net.sf.cotelab.app.dupfilefinder.hunter.HunterTest
 -------------------------------------------------------------------------------
-Tests run: 1, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 0.112 sec <<< FAILURE!
+Tests run: 1, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 0.113 sec <<< FAILURE!
 testUpdateProgress(net.sf.cotelab.app.dupfilefinder.hunter.HunterTest)  Time elapsed: 0.065 sec  <<< FAILURE!
-java.lang.AssertionError: expected:<98> but was:<97>
+java.lang.AssertionError: expected:<84> but was:<83>
 	at org.junit.Assert.fail(Assert.java:89)
 	at org.junit.Assert.failNotEquals(Assert.java:835)
 	at org.junit.Assert.assertEquals(Assert.java:647)

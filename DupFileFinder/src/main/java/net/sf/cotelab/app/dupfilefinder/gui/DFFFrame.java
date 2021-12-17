@@ -574,6 +574,7 @@ public class DFFFrame extends JFrame implements ResettableObject {
 					file2EquivSetMap, ancestorsOfDups);
 	protected HeapMonitorPanel heapMonitor = new HeapMonitorPanel();
 	protected JMenuItem helpAboutMenuItem;
+	protected JMenuItem helpUsageMenuItem;
 	protected JMenu helpMenu;
 	protected CachedFileTreeCellRenderer highlightingTreeCellRenderer =
 			new DuplicateHighlightingTreeCellRenderer(
@@ -724,6 +725,26 @@ public class DFFFrame extends JFrame implements ResettableObject {
         
         helpMenu = new JMenu("Help");
         helpMenu.add(helpAboutMenuItem);
+        
+        helpUsageMenuItem = new JMenuItem("DupFileFinder Usage");
+        helpUsageMenuItem.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				OKBrowserDialog popup =
+						new OKBrowserDialog(thisFrame, "DupFileFinder Usage", true);
+
+				popup.setDefaultCloseOperation(DISPOSE_ON_CLOSE);
+				popup.setMinimumSize(new Dimension(500, 700));
+				popup.setUrl("http://github.com/alantcote/DupFileFinder/wiki/DupFileFinder-Usage");
+				
+				popup.pack();
+				
+				popup.setVisible(true);
+			}
+        });
+        
+        helpMenu = new JMenu("Help");
+        helpMenu.add(helpAboutMenuItem);
+        helpMenu.add(helpUsageMenuItem);
         
         menuBar = new JMenuBar();
         menuBar.add(fileMenu);
