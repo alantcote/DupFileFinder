@@ -46,7 +46,7 @@ import net.sf.cotelab.util.collections.HashMultiMap;
 public class GroupByChecksumPhase extends Phase {
 	public static final int BUFFER_SIZE = 16384;
 	public static final double PROGRESS_WEIGHT = 0;
-    public static final double PROGRESS_WEIGHT_USING_CKSUM = 500;
+    public static final double PROGRESS_WEIGHT_USING_CKSUM = 12790507;
 	
 	public static final long SAMPLE_SIZE = 32768;
 
