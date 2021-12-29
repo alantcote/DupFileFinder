@@ -1,0 +1,4 @@
+net\sf\cotelab\app\findduplicates\AppTest.class
+net\sf\cotelab\app\dupfilefinder\hunter\PhaseTest.class
+net\sf\cotelab\app\dupfilefinder\hunter\HunterTest.class
+net\sf\cotelab\app\dupfilefinder\hunter\PhaseTest$SamplePhase.class

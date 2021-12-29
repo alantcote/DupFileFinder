@@ -1,0 +1,54 @@
+@options
+@packages
+@argfile
+--class-path
+'C:/Users/TEST/.m2/repository/net/bytebuddy/byte-buddy/1.12.6/byte-buddy-1.12.6.jar;C:/Users/TEST/.m2/repository/cglib/cglib-nodep/3.3.0/cglib-nodep-3.3.0.jar;C:/Users/TEST/.m2/repository/org/openjfx/javafx-graphics/18-ea+8/javafx-graphics-18-ea+8.jar;C:/Users/TEST/.m2/repository/org/openjfx/javafx-fxml/18-ea+8/javafx-fxml-18-ea+8-win.jar;C:/Users/TEST/.m2/repository/org/openjfx/javafx-controls/18-ea+8/javafx-controls-18-ea+8.jar;C:/Users/TEST/.m2/repository/org/openjfx/javafx-base/18-ea+8/javafx-base-18-ea+8.jar;C:/Users/TEST/.m2/repository/org/openjfx/javafx-media/18-ea+8/javafx-media-18-ea+8.jar;C:/Users/TEST/.m2/repository/org/jmock/jmock-imposters/2.12.0/jmock-imposters-2.12.0.jar;C:/Users/TEST/.m2/repository/org/jmock/jmock/2.12.0/jmock-2.12.0.jar;C:/Users/TEST/.m2/repository/org/jmock/jmock-testjar/2.12.0/jmock-testjar-2.12.0.jar;C:/Users/TEST/.m2/repository/com/google/code/findbugs/annotations/3.0.1/annotations-3.0.1.jar;C:/Users/TEST/.m2/repository/net/jcip/jcip-annotations/1.0/jcip-annotations-1.0.jar;C:/Users/TEST/.m2/repository/com/google/code/findbugs/jsr305/3.0.1/jsr305-3.0.1.jar;C:/Users/TEST/.m2/repository/org/ow2/asm/asm/7.1/asm-7.1.jar;C:/Users/TEST/.m2/repository/org/apache-extras/beanshell/bsh/2.0b6/bsh-2.0b6.jar;C:/Users/TEST/.m2/repository/org/objenesis/objenesis/3.0.1/objenesis-3.0.1.jar;C:/Users/TEST/.m2/repository/org/jmock/jmock-legacy/2.12.0/jmock-legacy-2.12.0.jar;C:/Users/TEST/.m2/repository/cglib/cglib/3.2.8/cglib-3.2.8.jar;C:/Users/TEST/.m2/repository/junit/junit/4.13.2/junit-4.13.2.jar;C:/Users/TEST/.m2/repository/org/hamcrest/hamcrest/2.2/hamcrest-2.2.jar'
+--module-path
+'C:/Users/TEST/.m2/repository/org/openjfx/javafx-controls/18-ea+8/javafx-controls-18-ea+8-win.jar;C:/Users/TEST/.m2/repository/org/openjfx/javafx-media/18-ea+8/javafx-media-18-ea+8-win.jar;C:/Users/TEST/.m2/repository/org/openjfx/javafx-base/18-ea+8/javafx-base-18-ea+8-win.jar;C:/Users/TEST/.m2/repository/net/sf/cotelab/CLUtilities/0.1.0-SNAPSHOT/CLUtilities-0.1.0-SNAPSHOT.jar;C:/Users/TEST/.m2/repository/org/openjfx/javafx-graphics/18-ea+8/javafx-graphics-18-ea+8-win.jar;C:/Users/TEST/.m2/repository/org/openjfx/javafx-swing/18-ea+8/javafx-swing-18-ea+8-win.jar;C:/Users/TEST/git/DupFileFinder/DupFileFinder/target/FindDuplicates-0.1.0-SNAPSHOT.jar;C:/Users/TEST/.m2/repository/org/openjfx/javafx-web/18-ea+8/javafx-web-18-ea+8-win.jar'
+--patch-module
+dupfilefinder='C:/Users/TEST/git/DupFileFinder/DupFileFinder/src/main/java;C:/Users/TEST/git/DupFileFinder/DupFileFinder/target/generated-sources/annotations'
+-encoding
+'UTF-8'
+-protected
+--module-source-path
+'C:/Users/TEST/git/DupFileFinder/DupFileFinder/target/apidocs/src'
+-author
+-bottom
+'Copyright &#169; 2014&#x2013;2021 <a href="https://github.com/alantcote">Cote\' Lab</a>. All rights reserved.'
+-charset
+'UTF-8'
+-d
+'C:/Users/TEST/git/DupFileFinder/DupFileFinder/target/apidocs'
+-docencoding
+'UTF-8'
+-doctitle
+'net.sf.cotelab:FindDuplicates 0.1.0-SNAPSHOT API'
+-use
+-version
+-windowtitle
+'net.sf.cotelab:FindDuplicates 0.1.0-SNAPSHOT API'
+net.sf.cotelab.app.dupfilefinder.action
+net.sf.cotelab.app.dupfilefinder.beans
+net.sf.cotelab.app.dupfilefinder
+net.sf.cotelab.app.dupfilefinder.gui
+net.sf.cotelab.app.dupfilefinder.hunter
+net.sf.cotelab.app.dupfilefinder.tree
+'C:/Users/TEST/git/DupFileFinder/DupFileFinder/src/main/java/module-info.java'
+C:\Users\TEST\git\DupFileFinder\DupFileFinder\target\apidocs\allclasses-index.html = 1640740179299
+C:\Users\TEST\git\DupFileFinder\DupFileFinder\target\apidocs\allpackages-index.html = 1640740179303
+C:\Users\TEST\git\DupFileFinder\DupFileFinder\target\apidocs\constant-values.html = 1640740178990
+C:\Users\TEST\git\DupFileFinder\DupFileFinder\target\apidocs\element-list = 1640740178879
+C:\Users\TEST\git\DupFileFinder\DupFileFinder\target\apidocs\help-doc.html = 1640740179402
+C:\Users\TEST\git\DupFileFinder\DupFileFinder\target\apidocs\index-all.html = 1640740179393
+C:\Users\TEST\git\DupFileFinder\DupFileFinder\target\apidocs\index.html = 1640740179397
+C:\Users\TEST\git\DupFileFinder\DupFileFinder\target\apidocs\jquery-ui.overrides.css = 1640740179465
+C:\Users\TEST\git\DupFileFinder\DupFileFinder\target\apidocs\member-search-index.js = 1640740179315
+C:\Users\TEST\git\DupFileFinder\DupFileFinder\target\apidocs\module-search-index.js = 1640740179306
+C:\Users\TEST\git\DupFileFinder\DupFileFinder\target\apidocs\overview-tree.html = 1640740179240
+C:\Users\TEST\git\DupFileFinder\DupFileFinder\target\apidocs\package-search-index.js = 1640740179309
+C:\Users\TEST\git\DupFileFinder\DupFileFinder\target\apidocs\script.js = 1640740179409
+C:\Users\TEST\git\DupFileFinder\DupFileFinder\target\apidocs\search.js = 1640740179414
+C:\Users\TEST\git\DupFileFinder\DupFileFinder\target\apidocs\serialized-form.html = 1640740179018
+C:\Users\TEST\git\DupFileFinder\DupFileFinder\target\apidocs\stylesheet.css = 1640740179406
+C:\Users\TEST\git\DupFileFinder\DupFileFinder\target\apidocs\tag-search-index.js = 1640740179318
+C:\Users\TEST\git\DupFileFinder\DupFileFinder\target\apidocs\type-search-index.js = 1640740179311
