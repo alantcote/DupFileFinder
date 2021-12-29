@@ -41,7 +41,6 @@ public class OKBrowserDialog extends JDialog {
 	}
 	
 	protected void finishConstruction() {
-		// TODO set up the button and browser
 		OKBrowserDialog thisDialog = this;
 		JButton button = new JButton("OK");
         final JFXPanel fxPanel = new JFXPanel();
