@@ -14,7 +14,7 @@ dupfilefinder='C:/Users/TEST/git/DupFileFinder/DupFileFinder/src/main/java;C:/Us
 'C:/Users/TEST/git/DupFileFinder/DupFileFinder/target/apidocs/src'
 -author
 -bottom
-'Copyright &#169; 2014&#x2013;2021 <a href="https://github.com/alantcote">Cote\' Lab</a>. All rights reserved.'
+'Copyright &#169; 2014&#x2013;2022 <a href="https://github.com/alantcote">Cote\' Lab</a>. All rights reserved.'
 -charset
 'UTF-8'
 -d
@@ -34,21 +34,21 @@ net.sf.cotelab.app.dupfilefinder.gui
 net.sf.cotelab.app.dupfilefinder.hunter
 net.sf.cotelab.app.dupfilefinder.tree
 'C:/Users/TEST/git/DupFileFinder/DupFileFinder/src/main/java/module-info.java'
-C:\Users\TEST\git\DupFileFinder\DupFileFinder\target\apidocs\allclasses-index.html = 1640798662196
-C:\Users\TEST\git\DupFileFinder\DupFileFinder\target\apidocs\allpackages-index.html = 1640798662200
-C:\Users\TEST\git\DupFileFinder\DupFileFinder\target\apidocs\constant-values.html = 1640798661880
-C:\Users\TEST\git\DupFileFinder\DupFileFinder\target\apidocs\element-list = 1640798661776
-C:\Users\TEST\git\DupFileFinder\DupFileFinder\target\apidocs\help-doc.html = 1640798662290
-C:\Users\TEST\git\DupFileFinder\DupFileFinder\target\apidocs\index-all.html = 1640798662279
-C:\Users\TEST\git\DupFileFinder\DupFileFinder\target\apidocs\index.html = 1640798662283
-C:\Users\TEST\git\DupFileFinder\DupFileFinder\target\apidocs\jquery-ui.overrides.css = 1640798662344
-C:\Users\TEST\git\DupFileFinder\DupFileFinder\target\apidocs\member-search-index.js = 1640798662211
-C:\Users\TEST\git\DupFileFinder\DupFileFinder\target\apidocs\module-search-index.js = 1640798662203
-C:\Users\TEST\git\DupFileFinder\DupFileFinder\target\apidocs\overview-tree.html = 1640798662132
-C:\Users\TEST\git\DupFileFinder\DupFileFinder\target\apidocs\package-search-index.js = 1640798662205
-C:\Users\TEST\git\DupFileFinder\DupFileFinder\target\apidocs\script.js = 1640798662296
-C:\Users\TEST\git\DupFileFinder\DupFileFinder\target\apidocs\search.js = 1640798662301
-C:\Users\TEST\git\DupFileFinder\DupFileFinder\target\apidocs\serialized-form.html = 1640798661905
-C:\Users\TEST\git\DupFileFinder\DupFileFinder\target\apidocs\stylesheet.css = 1640798662293
-C:\Users\TEST\git\DupFileFinder\DupFileFinder\target\apidocs\tag-search-index.js = 1640798662214
-C:\Users\TEST\git\DupFileFinder\DupFileFinder\target\apidocs\type-search-index.js = 1640798662207
+C:\Users\TEST\git\DupFileFinder\DupFileFinder\target\apidocs\allclasses-index.html = 1641431984759
+C:\Users\TEST\git\DupFileFinder\DupFileFinder\target\apidocs\allpackages-index.html = 1641431984764
+C:\Users\TEST\git\DupFileFinder\DupFileFinder\target\apidocs\constant-values.html = 1641431984430
+C:\Users\TEST\git\DupFileFinder\DupFileFinder\target\apidocs\element-list = 1641431984310
+C:\Users\TEST\git\DupFileFinder\DupFileFinder\target\apidocs\help-doc.html = 1641431984872
+C:\Users\TEST\git\DupFileFinder\DupFileFinder\target\apidocs\index-all.html = 1641431984863
+C:\Users\TEST\git\DupFileFinder\DupFileFinder\target\apidocs\index.html = 1641431984867
+C:\Users\TEST\git\DupFileFinder\DupFileFinder\target\apidocs\jquery-ui.overrides.css = 1641431984932
+C:\Users\TEST\git\DupFileFinder\DupFileFinder\target\apidocs\member-search-index.js = 1641431984778
+C:\Users\TEST\git\DupFileFinder\DupFileFinder\target\apidocs\module-search-index.js = 1641431984767
+C:\Users\TEST\git\DupFileFinder\DupFileFinder\target\apidocs\overview-tree.html = 1641431984691
+C:\Users\TEST\git\DupFileFinder\DupFileFinder\target\apidocs\package-search-index.js = 1641431984769
+C:\Users\TEST\git\DupFileFinder\DupFileFinder\target\apidocs\script.js = 1641431984877
+C:\Users\TEST\git\DupFileFinder\DupFileFinder\target\apidocs\search.js = 1641431984881
+C:\Users\TEST\git\DupFileFinder\DupFileFinder\target\apidocs\serialized-form.html = 1641431984462
+C:\Users\TEST\git\DupFileFinder\DupFileFinder\target\apidocs\stylesheet.css = 1641431984875
+C:\Users\TEST\git\DupFileFinder\DupFileFinder\target\apidocs\tag-search-index.js = 1641431984781
+C:\Users\TEST\git\DupFileFinder\DupFileFinder\target\apidocs\type-search-index.js = 1641431984772
